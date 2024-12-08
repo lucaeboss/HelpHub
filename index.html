@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpHub - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Smooth scrolling for anchor links
+            $('nav a').on('click', function(event) {
+                const target = $(this).attr('href');
+                if (target !== 'index.html') { // Prevent smooth scroll for non-anchor links
+                    window.location.href = target; // Navigate to the link
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to HelpHub</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="charities.html">Charities List</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>About Us</h2>
+            <p>HelpHub is dedicated to connecting people with charities that need support. Join us in making a difference!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 HelpHub. All rights reserved.</p>
+    </footer>
+</body>
+</html>

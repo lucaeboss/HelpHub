@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpHub - Charity Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="charity_profile.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Charity Profile</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="charities.html">Charities List</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Charity Name</h2>
+            <img src="charity_image.jpg" alt="Charity Image">
+            <p>Description of the charity goes here. This section can include information about the charity's mission, vision, and the impact it has on the community.</p>
+        </section>
+
+        <section>
+            <h2>Get Involved</h2>
+            <h3>Make a Donation</h3>
+            <form>
+                <label for="donorName">Your Name:</label>
+                <input type="text" id="donorName" name="donorName" required>
+                
+                <label for="donorEmail">Your Email:</label>
+                <input type="email" id="donorEmail" name="donorEmail" required>
+                
+                <label for="donationAmount">Donation Amount:</label>
+                <input type="number" id="donationAmount" name="donationAmount" required>
+                
+                <button type="submit">Donate</button>
+            </form>
+
+            <h3>Volunteer</h3>
+            <button id="volunteerButton">Volunteer Now</button>
+            
+            <!-- Hidden volunteer form -->
+            <div id="volunteerFormContainer" style="display: none;">
+                <form>
+                    <label for="volunteerName">Your Name:</label>
+                    <input type="text" id="volunteerName" name="volunteerName" required>
+                    
+                    <label for="volunteerEmail">Your Email:</label>
+                    <input type="email" id="volunteerEmail" name="volunteerEmail" required>
+                    
+                    <label for="volunteerMessage">Message:</label>
+                    <textarea id="volunteerMessage" name="volunteerMessage" required></textarea>
+                    
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- New Section for Recent News -->
+        <section id="newsSection">
+            <h2>Recent News</h2>
+            <ul id="newsList"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 HelpHub. All rights reserved.</p>
+    </footer>
+</body>
+</html>

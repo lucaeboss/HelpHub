@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpHub - Charities List</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Smooth scrolling for anchor links
+            $('nav a').on('click', function(event) {
+                const target = $(this).attr('href');
+                if (target !== 'charities.html') { // Prevent smooth scroll for non-anchor links
+                    window.location.href = target; // Navigate to the link
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Charities List</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="charities.html">Charities List</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Available Charities</h2>
+            <ul>
+                <li><a href="charity_profile.html">Charity Name 1</a></li>
+                <li><a href="charity_profile.html">Charity Name 2</a></li>
+                <li><a href="charity_profile.html">Charity Name 3</a></li>
+            </ul>
+        </section>
+
+        <!-- New Section for Volunteer Opportunities -->
+        <section id="volunteerOpportunities">
+            <h2>Volunteer Opportunities</h2>
+            <div id="opportunitiesList"></div>
+            <div id="errorMessage" style="color: red; display: none;"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 HelpHub. All rights reserved.</p>
+    </footer>
+
+    <script src="volunteer_opportunities.js"></script>
+</body>
+</html>
